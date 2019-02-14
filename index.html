@@ -6,9 +6,7 @@
   <title>si659-assignment1-a-frame</title>
   <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
   <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
-  <script>
-    document.ready()
-  </script>
+  <script src="https://unpkg.com/aframe-animation-component@^4.1.2/dist/aframe-animation-component.min.js"></script> 
 
 </head>
 
@@ -20,17 +18,18 @@
     <a-assets>
       <a-asset-item id="tree" src="./tree.glb"></a-asset-item>
     </a-assets>
-    <a-entity position="1.5 6.5 2" rotation="-47 20 0">
+    <a-entity position="1.5 6.5 2" rotation="-47 20 0" animation__rot="property: rotation; dir: alternate; dur: 10000; easing: easeInSine; to: -90 2 0" animation__pos="property: position; dir: alternate; dur: 10000; easing: easeInSine; to: 0 3 -2.5">
       <a-camera fov="50" near="0.05" far="10000"></a-camera>
     </a-entity>
   
-    <a-entity position="1 1.75 0">
+    <a-entity position="0 1.75 -0.5">
       <a-box position="0 0 0" width="4.5" height="3.5" depth="0.3" material="color:#202031"></a-box>
       <a-box position="-3.71611 0 -1.53651" width="4.5" height="3.5" depth="0.3" material="color:#202031" rotation="0 -45 0"></a-box>
       <a-box position="-5.61691 0 -5.16461" width="4.5" height="3.5" depth="0.3" material="color:#202031" rotation="0 -80 0"></a-box>
     </a-entity>
-    <a-entity position="0 1.1 -4" rotation="0 30 0">
-      <a-box position="-1.02622 0.1 0.07164" rotation="0 30 0" width="3" height="0.2" depth="1.5" color="#7E5C34" shadow="" material="color:#fff" geometry="width:0.3;height:0.02;depth:0.5"></a-box>
+    <a-entity position="0 1.1 -4" rotation="0 -10 0">
+      <a-box position="-1.02622 0.1 0.07164" rotation="0 30 0" width="0.3" height="0.02" depth="0.5" color="#fff"></a-box>
+      <a-text position="0 0.1 0" rotation="-90 0 0" value="Zhen" color="#7E5C34"></a-text>
       <a-box position="0 0 0" rotation="0 0 0" width="3" height="0.2" depth="1.5" color="#7E5C34" shadow></a-box>
       <a-cylinder position="1.25 -0.6 -0.5" radius="0.1" height="1" color="#7E5C34" shadow></a-cylinder>
       <a-cylinder position="-1.25 -0.6 -0.5" radius="0.1" height="1" color="#7E5C34" shadow></a-cylinder>
@@ -39,8 +38,8 @@
       <a-cylinder position="-1.25 -0.6 0.5" radius="0.1" height="1" color="#7E5C34" shadow></a-cylinder>
       <a-cylinder position="-0.45 -0.85 2" radius="0.1" height="0.5" color="#7E5C34" shadow="" material="color:#2B5E5E"></a-cylinder>
       <a-cylinder position="-0.45 -0.6 2" radius="0.25" height="0.1" color="#7E5C34" shadow="" material="color:#2B5E5E"></a-cylinder>
-      <a-plane position="0 -1.1 0" rotation="-90 0 0" width="10" height="6" color="#223B2C" shadow></a-plane>
-      <a-entity gltf-model="#tree" position="2 2 0.12" rotation="0 180 0" scale="1.4 1.4 1.4"></a-entity>
+      <a-plane position="0 -1.1 0" rotation="-90 0 0" width="30" height="6" color="#223B2C" shadow></a-plane>
+      <a-entity gltf-model="#tree" position="2 3 0.12" rotation="0 180 0" scale="1.4 1.4 1.4"></a-entity>
     </a-entity>
     
     <a-sky color="#C4A65A"></a-sky>
